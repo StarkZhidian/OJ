@@ -77,8 +77,11 @@ class Solution {
      * @return 合并后链表的头节点
      */
     ListNode mergeList(ListNode node1, ListNode node2) {
-        if (node1 == null && node2 == null) {
-            return null;
+        if (node1 == null) {
+            return node2;
+        }
+        if (node2 == null) {
+            return node1;
         }
         ListNode resHead = null, tempTail = null;
         // 先把结果链表的头节点算出来
