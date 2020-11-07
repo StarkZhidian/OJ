@@ -1,19 +1,19 @@
 
 /**
-	���ӣ�https://leetcode-cn.com/problems/add-strings
+	链接：https://leetcode-cn.com/problems/add-strings
 
-	���������ַ�����ʽ�ķǸ�����?num1 ��num2?���������ǵĺ͡�
+	给定两个字符串形式的非负整数?num1 和num2?，计算它们的和。
 
-	ע�⣺
+	注意：
 
-	num1 ��num2?�ĳ��ȶ�С�� 5100.
-	num1 ��num2 ��ֻ��������?0-9.
-	num1 ��num2 ���������κ�ǰ���㡣
-	�㲻��ʹ���κ΃Ƚ� BigInteger �⣬?Ҳ����ֱ�ӽ�������ַ���ת��Ϊ������ʽ��
+	num1 和num2?的长度都小于 5100.
+	num1 和num2 都只包含数字?0-9.
+	num1 和num2 都不包含任何前导零。
+	你不能使用任何內建 BigInteger 库，?也不能直接将输入的字符串转换为整数形式。
 
-	��Դ�����ۣ�LeetCode��
+	来源：力扣（LeetCode）
 	
-	˼·��ģ��ӷ����ɣ�ע��������ӵĽ�λ����
+	思路：模拟加法即可，注意两数想加的进位处理
 */
 class Solution {
     public String addStrings(String num1, String num2) {

@@ -9,8 +9,8 @@
  *     TreeNode(int x) { val = x; }
  * }
  * 
- * ˼·��дһ���ж������������Ƿ�Ϊͬһ�ṹ�����ķ���(isSameTree)��
- * ֮���������� isSubtree �зֱ�� (s,t); (s.left,t) �� (s.right,t) �ݹ��ж��Ƿ�Ϊͬһ�ṹ�Ķ���������
+ * 思路：写一个判断两个二叉树是否为同一结构的树的方法(isSameTree)，
+ * 之后在主方法 isSubtree 中分别对 (s,t); (s.left,t) 和 (s.right,t) 递归判断是否为同一结构的二叉树即可
  */
 class Solution {
     

@@ -2,7 +2,7 @@
 #include <iostream>
 #include <stack>
 using namespace std;
-#define MAX 10000  // ¼ÙÉèÈ¨Öµ×î´ó²»³¬¹ı 10000
+#define MAX 10000  // å‡è®¾æƒå€¼æœ€å¤§ä¸è¶…è¿‡ 10000
 
 struct Edge
 {
@@ -11,20 +11,20 @@ struct Edge
     int w;
 };
 
-Edge edge[10000]; // ¼ÇÂ¼ËùÓĞ±ß
-int  dist[100];   // Ô´µãµ½¶¥µã i µÄ×î¶Ì¾àÀë
-int  path[100];   // ¼ÇÂ¼×î¶ÌÂ·µÄÂ·¾¶
-int  vertex_num;  // ¶¥µãÊı
-int  edge_num;    // ±ßÊı
-int  source;      // Ô´µã
+Edge edge[10000]; // è®°å½•æ‰€æœ‰è¾¹
+int  dist[100];   // æºç‚¹åˆ°é¡¶ç‚¹ i çš„æœ€çŸ­è·ç¦»
+int  path[100];   // è®°å½•æœ€çŸ­è·¯çš„è·¯å¾„
+int  vertex_num;  // é¡¶ç‚¹æ•°
+int  edge_num;    // è¾¹æ•°
+int  source;      // æºç‚¹
 
 bool BellmanFord()
 {
-    // ³õÊ¼»¯
+    // åˆå§‹åŒ–
     for (int i = 0; i < vertex_num; i++)
         dist[i] = (i == source) ? 0 : MAX;
 
-    // n-1 ´ÎÑ­»·Çó×î¶ÌÂ·¾¶
+    // n-1 æ¬¡å¾ªç¯æ±‚æœ€çŸ­è·¯å¾„
     for (int i = 1; i <= vertex_num - 1; i++)
     {
         for (int j = 0; j < edge_num; j++)
@@ -36,8 +36,8 @@ bool BellmanFord()
             }
         }
     }
-    bool flag = true;  // ±ê¼ÇÊÇ·ñÓĞ¸ºÈ¨»ØÂ·
-    // µÚ n ´ÎÑ­»·ÅĞ¶Ï¸ºÈ¨»ØÂ·
+    bool flag = true;  // æ ‡è®°æ˜¯å¦æœ‰è´Ÿæƒå›è·¯
+    // ç¬¬ n æ¬¡å¾ªç¯åˆ¤æ–­è´Ÿæƒå›è·¯
     for (int i = 0; i < edge_num; i++)
     {
         if (dist[edge[i].v] > dist[edge[i].u] + edge[i].w)
@@ -57,21 +57,21 @@ void Print()
         {
             int p = i;
             stack<int> s;
-            cout << "¶¥µã " << source << " µ½¶¥µã " << p << " µÄ×î¶ÌÂ·¾¶ÊÇ£º ";
+            cout << "é¡¶ç‚¹ " << source << " åˆ°é¡¶ç‚¹ " << p << " çš„æœ€çŸ­è·¯å¾„æ˜¯ï¼š ";
 
-            while (source != p)  // Â·¾¶Ë³ĞòÊÇÄæÏòµÄ£¬ËùÒÔÏÈ±£´æµ½Õ»
+            while (source != p)  // è·¯å¾„é¡ºåºæ˜¯é€†å‘çš„ï¼Œæ‰€ä»¥å…ˆä¿å­˜åˆ°æ ˆ
             {
                 s.push(p);
                 p = path[p];
             }
 
             cout << source;
-            while (!s.empty())  // ÒÀ´Î´ÓÕ»ÖĞÈ¡³öµÄ²ÅÊÇÕıĞòÂ·¾¶
+            while (!s.empty())  // ä¾æ¬¡ä»æ ˆä¸­å–å‡ºçš„æ‰æ˜¯æ­£åºè·¯å¾„
             {
                 cout << "--" << s.top();
                 s.pop();
             }
-            cout << "    ×î¶ÌÂ·¾¶³¤¶ÈÊÇ£º" << dist[i] << endl;
+            cout << "    æœ€çŸ­è·¯å¾„é•¿åº¦æ˜¯ï¼š" << dist[i] << endl;
         }
 
     }
@@ -79,9 +79,9 @@ void Print()
 
 int main()
 {
-    cout << "ÇëÊäÈëÍ¼µÄ¶¥µãÊı£¬±ßÊı£¬Ô´µã£º";
+    cout << "è¯·è¾“å…¥å›¾çš„é¡¶ç‚¹æ•°ï¼Œè¾¹æ•°ï¼Œæºç‚¹ï¼š";
     cin >> vertex_num >> edge_num >> source;
-    cout << "ÇëÊäÈë" << edge_num << "Ìõ±ßµÄĞÅÏ¢£º\n";
+    cout << "è¯·è¾“å…¥" << edge_num << "æ¡è¾¹çš„ä¿¡æ¯ï¼š\n";
     for (int i = 0; i < edge_num; i++)
         cin >> edge[i].u >> edge[i].v >> edge[i].w;
     if (BellmanFord())

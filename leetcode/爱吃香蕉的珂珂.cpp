@@ -1,43 +1,43 @@
 /**
  link: https://leetcode-cn.com/problems/koko-eating-bananas/
- ÌâÄ¿ÃèÊö
+ é¢˜ç›®æè¿°
 	
-	çæçæÏ²»¶³ÔÏã½¶¡£ÕâÀïÓÐ N ¶ÑÏã½¶£¬µÚ i ¶ÑÖÐÓÐ piles[i] ¸ùÏã½¶¡£¾¯ÎÀÒÑ¾­Àë¿ªÁË£¬½«ÔÚ H Ð¡Ê±ºó»ØÀ´¡£
+	ç‚ç‚å–œæ¬¢åƒé¦™è•‰ã€‚è¿™é‡Œæœ‰ N å †é¦™è•‰ï¼Œç¬¬ i å †ä¸­æœ‰ piles[i] æ ¹é¦™è•‰ã€‚è­¦å«å·²ç»ç¦»å¼€äº†ï¼Œå°†åœ¨ H å°æ—¶åŽå›žæ¥ã€‚
 	
-	çæçæ¿ÉÒÔ¾ö¶¨Ëý³ÔÏã½¶µÄËÙ¶È K £¨µ¥Î»£º¸ù/Ð¡Ê±£©¡£Ã¿¸öÐ¡Ê±£¬Ëý½«»áÑ¡ÔñÒ»¶ÑÏã½¶£¬
-		´ÓÖÐ³Ôµô K ¸ù¡£Èç¹ûÕâ¶ÑÏã½¶ÉÙÓÚ K ¸ù£¬Ëý½«³ÔµôÕâ¶ÑµÄËùÓÐÏã½¶£¬È»ºóÕâÒ»Ð¡Ê±ÄÚ²»»áÔÙ³Ô¸ü¶àµÄÏã½¶¡£  
+	ç‚ç‚å¯ä»¥å†³å®šå¥¹åƒé¦™è•‰çš„é€Ÿåº¦ K ï¼ˆå•ä½ï¼šæ ¹/å°æ—¶ï¼‰ã€‚æ¯ä¸ªå°æ—¶ï¼Œå¥¹å°†ä¼šé€‰æ‹©ä¸€å †é¦™è•‰ï¼Œ
+		ä»Žä¸­åƒæŽ‰ K æ ¹ã€‚å¦‚æžœè¿™å †é¦™è•‰å°‘äºŽ K æ ¹ï¼Œå¥¹å°†åƒæŽ‰è¿™å †çš„æ‰€æœ‰é¦™è•‰ï¼Œç„¶åŽè¿™ä¸€å°æ—¶å†…ä¸ä¼šå†åƒæ›´å¤šçš„é¦™è•‰ã€‚  
 	
-	çæçæÏ²»¶ÂýÂý³Ô£¬µ«ÈÔÈ»ÏëÔÚ¾¯ÎÀ»ØÀ´Ç°³ÔµôËùÓÐµÄÏã½¶¡£
+	ç‚ç‚å–œæ¬¢æ…¢æ…¢åƒï¼Œä½†ä»ç„¶æƒ³åœ¨è­¦å«å›žæ¥å‰åƒæŽ‰æ‰€æœ‰çš„é¦™è•‰ã€‚
 	
-	·µ»ØËý¿ÉÒÔÔÚ H Ð¡Ê±ÄÚ³ÔµôËùÓÐÏã½¶µÄ×îÐ¡ËÙ¶È K£¨K ÎªÕûÊý£©¡£
+	è¿”å›žå¥¹å¯ä»¥åœ¨ H å°æ—¶å†…åƒæŽ‰æ‰€æœ‰é¦™è•‰çš„æœ€å°é€Ÿåº¦ Kï¼ˆK ä¸ºæ•´æ•°ï¼‰ã€‚
 	
 	 
 	
-	Ê¾Àý 1£º
+	ç¤ºä¾‹ 1ï¼š
 	
-	ÊäÈë: piles = [3,6,7,11], H = 8
-	Êä³ö: 4
-	Ê¾Àý 2£º
+	è¾“å…¥: piles = [3,6,7,11], H = 8
+	è¾“å‡º: 4
+	ç¤ºä¾‹ 2ï¼š
 	
-	ÊäÈë: piles = [30,11,23,4,20], H = 5
-	Êä³ö: 30
-	Ê¾Àý 3£º
+	è¾“å…¥: piles = [30,11,23,4,20], H = 5
+	è¾“å‡º: 30
+	ç¤ºä¾‹ 3ï¼š
 	
-	ÊäÈë: piles = [30,11,23,4,20], H = 6
-	Êä³ö: 23
+	è¾“å…¥: piles = [30,11,23,4,20], H = 6
+	è¾“å‡º: 23
 	 
 	
-	ÌáÊ¾£º
+	æç¤ºï¼š
 	
 	1 <= piles.length <= 10^4
 	piles.length <= H <= 10^9
 	1 <= piles[i] <= 10^9
 	
-	Ë¼Â·£º¶þ·Ö·¨ÊÔ´¥ 
+	æ€è·¯ï¼šäºŒåˆ†æ³•è¯•è§¦ 
  */ 
 class Solution {
 public:
-	// ÒÔÃ¿Ð¡Ê± k ¸ùËÙ¶ÈÇó³ö³ÔÍêËùÓÐÏã½¶ËùÐèÊ±¼ä 
+	// ä»¥æ¯å°æ—¶ k æ ¹é€Ÿåº¦æ±‚å‡ºåƒå®Œæ‰€æœ‰é¦™è•‰æ‰€éœ€æ—¶é—´ 
     int host(vector<int>& piles, int k) {
         int size = piles.size(), res = 0;
         for (int i = 0; i < size; i++) {
@@ -55,10 +55,10 @@ public:
         int start = (sum - 1) / H + 1, end = maxCount, mid;
         while (start < end) {
             mid = start + (end - start) / 2;
-            // ¿ÉÒÔ³ÔÍê£¬³¢ÊÔËõÐ¡ mid µÄÖµ·¶Î§ 
+            // å¯ä»¥åƒå®Œï¼Œå°è¯•ç¼©å° mid çš„å€¼èŒƒå›´ 
             if (H >= host(piles, mid)) {
                 end = mid;
-            // Ã¿´Î³Ô mid ¸ù£¬²»ÄÜÔÚÏÞ¶¨Ê±¼äÄÚ³ÔÍê£¬Ìá¸ß mid Öµ 
+            // æ¯æ¬¡åƒ mid æ ¹ï¼Œä¸èƒ½åœ¨é™å®šæ—¶é—´å†…åƒå®Œï¼Œæé«˜ mid å€¼ 
             } else {
                 start = mid + 1;
             }

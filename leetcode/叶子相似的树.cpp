@@ -1,18 +1,18 @@
 
 
 /**
-  link��https://leetcode-cn.com/problems/leaf-similar-trees/ 
+  link：https://leetcode-cn.com/problems/leaf-similar-trees/ 
   
-  ��Ŀ������ 
-  �뿼��һ�Ŷ����������е�Ҷ�ӣ���ЩҶ�ӵ�ֵ�������ҵ�˳�������γ�һ�� Ҷֵ���� ��
+  题目描述： 
+  请考虑一颗二叉树上所有的叶子，这些叶子的值按从左到右的顺序排列形成一个 叶值序列 。
 
 <img src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/16/tree.png"></img> 
 
-�ٸ����ӣ�����ͼ��ʾ������һ��Ҷֵ����Ϊ (6, 7, 4, 9, 8) ������
+举个例子，如上图所示，给定一颗叶值序列为 (6, 7, 4, 9, 8) 的树。
 
-��������Ŷ�������Ҷֵ��������ͬ����ô���Ǿ���Ϊ������ Ҷ���� �ġ�
+如果有两颗二叉树的叶值序列是相同，那么我们就认为它们是 叶相似 的。
 
-�������������ͷ���ֱ�Ϊ root1 �� root2 ������Ҷ���Ƶģ��򷵻� true�����򷵻� false �� 
+如果给定的两个头结点分别为 root1 和 root2 的树是叶相似的，则返回 true；否则返回 false 。 
 
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -28,7 +28,7 @@ public:
         if (node == NULL) {
             return ;
         }
-        // �����Ҷ�ӽڵ㣬��¼��ֵ 
+        // 如果是叶子节点，记录其值 
         if (node->left == NULL && node->right == NULL) {
             v.push_back(node->val);
         }

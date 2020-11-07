@@ -1,29 +1,29 @@
 
 /**
  * Create by StarkZhidian on 2019-1-29
-	 1050 ÂÝÐý¾ØÕó £¨25 ·Ö£©
+	 1050 èžºæ—‹çŸ©é˜µ ï¼ˆ25 åˆ†ï¼‰
 	 linK: https://pintia.cn/problem-sets/994805260223102976/problems/994805275146436608?tdsourcetag=s_pctim_aiomsg
 	 
-	±¾ÌâÒªÇó½«¸ø¶¨µÄ N ¸öÕýÕûÊý°´·ÇµÝÔöµÄË³Ðò£¬ÌîÈë¡°ÂÝÐý¾ØÕó¡±¡£ËùÎ½¡°ÂÝÐý¾ØÕó¡±£¬ÊÇÖ¸´Ó×óÉÏ½ÇµÚ 1 ¸ö¸ñ×Ó¿ªÊ¼£¬°´Ë³Ê±ÕëÂÝÐý·½ÏòÌî³ä¡£ÒªÇó¾ØÕóµÄ¹æÄ£Îª m ÐÐ n ÁÐ£¬Âú×ãÌõ¼þ£ºm¡Án µÈÓÚ N£»m¡Ýn£»ÇÒ m?n È¡ËùÓÐ¿ÉÄÜÖµÖÐµÄ×îÐ¡Öµ¡£
+	æœ¬é¢˜è¦æ±‚å°†ç»™å®šçš„ N ä¸ªæ­£æ•´æ•°æŒ‰éžé€’å¢žçš„é¡ºåºï¼Œå¡«å…¥â€œèžºæ—‹çŸ©é˜µâ€ã€‚æ‰€è°“â€œèžºæ—‹çŸ©é˜µâ€ï¼Œæ˜¯æŒ‡ä»Žå·¦ä¸Šè§’ç¬¬ 1 ä¸ªæ ¼å­å¼€å§‹ï¼ŒæŒ‰é¡ºæ—¶é’ˆèžºæ—‹æ–¹å‘å¡«å……ã€‚è¦æ±‚çŸ©é˜µçš„è§„æ¨¡ä¸º m è¡Œ n åˆ—ï¼Œæ»¡è¶³æ¡ä»¶ï¼šmÃ—n ç­‰äºŽ Nï¼›mâ‰¥nï¼›ä¸” m?n å–æ‰€æœ‰å¯èƒ½å€¼ä¸­çš„æœ€å°å€¼ã€‚
 	
-	ÊäÈë¸ñÊ½£º
-	ÊäÈëÔÚµÚ 1 ÐÐÖÐ¸ø³öÒ»¸öÕýÕûÊý N£¬µÚ 2 ÐÐ¸ø³ö N ¸ö´ýÌî³äµÄÕýÕûÊý¡£ËùÓÐÊý×Ö²»³¬¹ý 10
+	è¾“å…¥æ ¼å¼ï¼š
+	è¾“å…¥åœ¨ç¬¬ 1 è¡Œä¸­ç»™å‡ºä¸€ä¸ªæ­£æ•´æ•° Nï¼Œç¬¬ 2 è¡Œç»™å‡º N ä¸ªå¾…å¡«å……çš„æ­£æ•´æ•°ã€‚æ‰€æœ‰æ•°å­—ä¸è¶…è¿‡ 10
 	?4
-	?? £¬ÏàÁÚÊý×ÖÒÔ¿Õ¸ñ·Ö¸ô¡£
+	?? ï¼Œç›¸é‚»æ•°å­—ä»¥ç©ºæ ¼åˆ†éš”ã€‚
 	
-	Êä³ö¸ñÊ½£º
-	Êä³öÂÝÐý¾ØÕó¡£Ã¿ÐÐ n ¸öÊý×Ö£¬¹² m ÐÐ¡£ÏàÁÚÊý×ÖÒÔ 1 ¸ö¿Õ¸ñ·Ö¸ô£¬ÐÐÄ©²»µÃÓÐ¶àÓà¿Õ¸ñ¡£
+	è¾“å‡ºæ ¼å¼ï¼š
+	è¾“å‡ºèžºæ—‹çŸ©é˜µã€‚æ¯è¡Œ n ä¸ªæ•°å­—ï¼Œå…± m è¡Œã€‚ç›¸é‚»æ•°å­—ä»¥ 1 ä¸ªç©ºæ ¼åˆ†éš”ï¼Œè¡Œæœ«ä¸å¾—æœ‰å¤šä½™ç©ºæ ¼ã€‚
 	
-	ÊäÈëÑùÀý£º
+	è¾“å…¥æ ·ä¾‹ï¼š
 	12
 	37 76 20 98 76 42 53 95 60 81 58 93
-	Êä³öÑùÀý£º
+	è¾“å‡ºæ ·ä¾‹ï¼š
 	98 95 93
 	42 37 81
 	53 20 76
 	58 60 76
 	
-	Ë¼Â·£º²ÉÓÃ¿ìËÙÅÅÐò½«Êý×éÖÐµÄÊý×ÖÅÅÐò£¬Ö®ºó¸ù¾Ý¹æÂÉ¹¹Ôì³öÂÝÐý¾ØÕó£¬×¢Òâµ± N ÎªËØÊýÊ±¿ÉÒÔÖ±½ÓÒ»ÐÐÒ»¸öÊýÊä³ö£¬·ñÔò×îºóÒ»¸ö²âÊÔµã³¬Ê± 
+	æ€è·¯ï¼šé‡‡ç”¨å¿«é€ŸæŽ’åºå°†æ•°ç»„ä¸­çš„æ•°å­—æŽ’åºï¼Œä¹‹åŽæ ¹æ®è§„å¾‹æž„é€ å‡ºèžºæ—‹çŸ©é˜µï¼Œæ³¨æ„å½“ N ä¸ºç´ æ•°æ—¶å¯ä»¥ç›´æŽ¥ä¸€è¡Œä¸€ä¸ªæ•°è¾“å‡ºï¼Œå¦åˆ™æœ€åŽä¸€ä¸ªæµ‹è¯•ç‚¹è¶…æ—¶ 
  */
 #include <stdio.h>
 #include <math.h>
@@ -33,7 +33,7 @@ int num[MAXN];
 int matrix[MAXN][MAXN];
 int N;
 
-// ´Ó´óµ½Ð¡½øÐÐ¿ìËÙÅÅÐò 
+// ä»Žå¤§åˆ°å°è¿›è¡Œå¿«é€ŸæŽ’åº 
 void quick_sort(int start, int end) {
 	if (start >= end) {
 		return ;
@@ -59,7 +59,7 @@ void display(int m, int n) {
 	int count = 0;
 	int left = 0, top = 0, right = n - 1, bottom = m - 1;
 	int i, j;
-	// N ÎªËØÊý£¬Ö»ÓÐÒ»ÁÐ 
+	// N ä¸ºç´ æ•°ï¼Œåªæœ‰ä¸€åˆ— 
 	if (n == 1) {
 		for (i = 0; i < N; i++) {
 			if (i) {

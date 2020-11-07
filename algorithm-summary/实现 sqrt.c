@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static double ACCEPT_WRONG_BOUND = 1e-6; // ¿É½ÓÊÜµÄÎó²î×î´óÖµ 
+static double ACCEPT_WRONG_BOUND = 1e-6; // å¯æ¥å—çš„è¯¯å·®æœ€å¤§å€¼ 
 
-// »ñÈ¡ x µÄ¾ø¶ÔÖµ
+// è·å– x çš„ç»å¯¹å€¼
 double get_abs(double x) { 
 	return x < 0 ? -x : x; 
 }
 
-// Çó³ö x µÄÆ½·½¸ù£¬Èç¹û²ÎÊı x Ğ¡ÓÚ 0£¬ÄÇÃ´½áÊø³ÌĞò 
+// æ±‚å‡º x çš„å¹³æ–¹æ ¹ï¼Œå¦‚æœå‚æ•° x å°äº 0ï¼Œé‚£ä¹ˆç»“æŸç¨‹åº 
 double get_sqrt(double x) {
-	// ¸ºÊıÃ»ÓĞÆ½·½¸ù 
+	// è´Ÿæ•°æ²¡æœ‰å¹³æ–¹æ ¹ 
 	if (x < 0) { 
 		fprintf(stderr, "argument x can not be negative!");
 		exit(1);
@@ -19,7 +19,7 @@ double get_sqrt(double x) {
 	while (1) {
 		mid = start + (end - start) / 2;
 		cur_res = mid * mid;
-		// Èç¹ûµ±Ç°µÃµ½µÄ½á¹ûºÍÔ­ÊıÖ®¼äµÄÎó²îĞ¡ÓÚ¿É½ÓÊÜÎó²î×î´óÖµ£¬Ôò½áÊøÑ­»· 
+		// å¦‚æœå½“å‰å¾—åˆ°çš„ç»“æœå’ŒåŸæ•°ä¹‹é—´çš„è¯¯å·®å°äºå¯æ¥å—è¯¯å·®æœ€å¤§å€¼ï¼Œåˆ™ç»“æŸå¾ªç¯ 
 		if (get_abs(cur_res - x) <= ACCEPT_WRONG_BOUND) {
 			break;
 		} 

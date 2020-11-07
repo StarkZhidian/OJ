@@ -1,24 +1,24 @@
 /**
-	93. ¸´Ô­IPµØÖ·
+	93. å¤åŸIPåœ°å€
 
 	link:https://leetcode-cn.com/problems/restore-ip-addresses/
 
-	ÌâÄ¿ÃèÊö
+	é¢˜ç›®æè¿°
 
-	¸ø¶¨Ò»¸öÖ»°üº¬Êı×ÖµÄ×Ö·û´®£¬¸´Ô­Ëü²¢·µ»ØËùÓĞ¿ÉÄÜµÄ IP µØÖ·¸ñÊ½¡£
+	ç»™å®šä¸€ä¸ªåªåŒ…å«æ•°å­—çš„å­—ç¬¦ä¸²ï¼Œå¤åŸå®ƒå¹¶è¿”å›æ‰€æœ‰å¯èƒ½çš„ IP åœ°å€æ ¼å¼ã€‚
 
-	Ê¾Àı:
+	ç¤ºä¾‹:
 
-	ÊäÈë: "25525511135"
-	Êä³ö: ["255.255.11.135", "255.255.111.35"]
+	è¾“å…¥: "25525511135"
+	è¾“å‡º: ["255.255.11.135", "255.255.111.35"]
 	
-	Ë¼Â·£ºµİ¹é£¬»ØËİ£¬IP µØÖ·µÄÒ»¹²ÓĞ 4 ¶Î£¬Ã¿Ò»¶ÎµÄ×î´óÖµÎª 255£¬×îĞ¡ÖµÎª 0£¬¶ÔÃ¿Ò»¶ÎµÄ¿ÉÄÜÖµ½øĞĞÊÔ´¥£¬
-	Èç¹ûµ½×îºó·¢ÏÖµÃµ½µÄ IP µØÖ·²»·ûºÏ£¬Ôò»ØËİ½øĞĞÏÂÒ»ÖÖÇé¿öµÄÊÔ´¥
+	æ€è·¯ï¼šé€’å½’ï¼Œå›æº¯ï¼ŒIP åœ°å€çš„ä¸€å…±æœ‰ 4 æ®µï¼Œæ¯ä¸€æ®µçš„æœ€å¤§å€¼ä¸º 255ï¼Œæœ€å°å€¼ä¸º 0ï¼Œå¯¹æ¯ä¸€æ®µçš„å¯èƒ½å€¼è¿›è¡Œè¯•è§¦ï¼Œ
+	å¦‚æœåˆ°æœ€åå‘ç°å¾—åˆ°çš„ IP åœ°å€ä¸ç¬¦åˆï¼Œåˆ™å›æº¯è¿›è¡Œä¸‹ä¸€ç§æƒ…å†µçš„è¯•è§¦
 */
 class Solution {
-    private static final int MAX_LENGTH = 12; // ip µØÖ·×÷ÎªÊı×ÖÏÔÊ¾Ê±×î´ó³¤¶ÈÎª 12
-    private static final int MAX_VALUE = 255; // Ã¿Ò»¶Î ip µØÖ·µÄ×î´óÖµ
-	private static final int MIN_VALUE = 0; // Ã¿Ò»¶Î ip µØÖ·µÄ×îĞ¡Öµ
+    private static final int MAX_LENGTH = 12; // ip åœ°å€ä½œä¸ºæ•°å­—æ˜¾ç¤ºæ—¶æœ€å¤§é•¿åº¦ä¸º 12
+    private static final int MAX_VALUE = 255; // æ¯ä¸€æ®µ ip åœ°å€çš„æœ€å¤§å€¼
+	private static final int MIN_VALUE = 0; // æ¯ä¸€æ®µ ip åœ°å€çš„æœ€å°å€¼
     
     private List<String> res = new ArrayList<>();
     
@@ -46,16 +46,16 @@ class Solution {
         int startIndex = curIndex, endIndex = Math.min(startIndex + 3, s.length());
         int value;
         String subStr, temp;
-		// µ±Ç°¶Î (part) µÄ ip µØÖ·³¤¶È¿ÉÄÜÎª 1-3
+		// å½“å‰æ®µ (part) çš„ ip åœ°å€é•¿åº¦å¯èƒ½ä¸º 1-3
         for (int i = startIndex + 1; i <= endIndex; i++) {
             subStr = s.substring(startIndex, i);
-			// Èç¹ûµ±Ç°µÄÖµ·ûºÏ ip µØÖ·¶Î£¬Ôòµİ¹éÏÂÒ»¶Î
+			// å¦‚æœå½“å‰çš„å€¼ç¬¦åˆ ip åœ°å€æ®µï¼Œåˆ™é€’å½’ä¸‹ä¸€æ®µ
             if (isValidValue(subStr)) {
                 temp = curRes;
                 curRes += curPart != 0 ? "." : "";
                 curRes += subStr;
                 solve(s, curRes, i, curPart + 1);
-				// »ØËİ£¬·ÀÖ¹µİ¹éÖĞÖµµÄ¸ÉÈÅ
+				// å›æº¯ï¼Œé˜²æ­¢é€’å½’ä¸­å€¼çš„å¹²æ‰°
                 curRes = temp;
             }
         }

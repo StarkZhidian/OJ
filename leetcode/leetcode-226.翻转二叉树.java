@@ -1,32 +1,32 @@
 /**
-	·­×ªÒ»¿Ã¶þ²æÊ÷¡£
+	ç¿»è½¬ä¸€æ£µäºŒå‰æ ‘ã€‚
 
-	Ê¾Àý£º
+	ç¤ºä¾‹ï¼š
 
-	ÊäÈë£º
+	è¾“å…¥ï¼š
 
 		 4
 	   /   \
 	  2     7
 	 / \   / \
 	1   3 6   9
-	Êä³ö£º
+	è¾“å‡ºï¼š
 
 		 4
 	   /   \
 	  7     2
 	 / \   / \
 	9   6 3   1
-	±¸×¢:
-	Õâ¸öÎÊÌâÊÇÊÜµ½ Max Howell µÄ Ô­ÎÊÌâ Æô·¢µÄ £º
+	å¤‡æ³¨:
+	è¿™ä¸ªé—®é¢˜æ˜¯å—åˆ° Max Howell çš„ åŽŸé—®é¢˜ å¯å‘çš„ ï¼š
 
-	¹È¸è£ºÎÒÃÇ90£¥µÄ¹¤³ÌÊ¦Ê¹ÓÃÄú±àÐ´µÄÈí¼þ(Homebrew)£¬µ«ÊÇÄúÈ´ÎÞ·¨ÔÚÃæÊÔÊ±ÔÚ°×°åÉÏÐ´³ö·­×ª¶þ²æÊ÷ÕâµÀÌâ£¬ÕâÌ«Ôã¸âÁË¡£
+	è°·æ­Œï¼šæˆ‘ä»¬90ï¼…çš„å·¥ç¨‹å¸ˆä½¿ç”¨æ‚¨ç¼–å†™çš„è½¯ä»¶(Homebrew)ï¼Œä½†æ˜¯æ‚¨å´æ— æ³•åœ¨é¢è¯•æ—¶åœ¨ç™½æ¿ä¸Šå†™å‡ºç¿»è½¬äºŒå‰æ ‘è¿™é“é¢˜ï¼Œè¿™å¤ªç³Ÿç³•äº†ã€‚
 
-	À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-	Á´½Ó£ºhttps://leetcode-cn.com/problems/invert-binary-tree
-	Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
+	æ¥æºï¼šåŠ›æ‰£ï¼ˆLeetCodeï¼‰
+	é“¾æŽ¥ï¼šhttps://leetcode-cn.com/problems/invert-binary-tree
+	è‘—ä½œæƒå½’é¢†æ‰£ç½‘ç»œæ‰€æœ‰ã€‚å•†ä¸šè½¬è½½è¯·è”ç³»å®˜æ–¹æŽˆæƒï¼Œéžå•†ä¸šè½¬è½½è¯·æ³¨æ˜Žå‡ºå¤„ã€‚
 	
-	Ë¼Â·£ºµÝ¹é£¬ÏÈ·­×ª×óÓÒ×ÓÊ÷£¬×îºó·­×ª¸ùÊ÷
+	æ€è·¯ï¼šé€’å½’ï¼Œå…ˆç¿»è½¬å·¦å³å­æ ‘ï¼Œæœ€åŽç¿»è½¬æ ¹æ ‘
 */
 
 /**

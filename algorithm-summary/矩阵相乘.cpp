@@ -1,21 +1,21 @@
 /**
- * Describe£ºÊµÏÖ¾ØÕóÏà³Ë
- * Author£ºÖ¸µã
- * Date£º2018/1/24  
+ * Describeï¼šå®ç°çŸ©é˜µç›¸ä¹˜
+ * Authorï¼šæŒ‡ç‚¹
+ * Dateï¼š2018/1/24  
  */
 #include <iostream>
 #include <cstring>
 using namespace  std;
 
-// ¼ÆËã¾ØÕó a(m*s ¹æÄ£) ºÍ¾ØÕó b(s*n ¹æÄ£) Ïà³ËµÄ½á¹û£¬²¢½«½á¹û·µ»Ø 
+// è®¡ç®—çŸ©é˜µ a(m*s è§„æ¨¡) å’ŒçŸ©é˜µ b(s*n è§„æ¨¡) ç›¸ä¹˜çš„ç»“æœï¼Œå¹¶å°†ç»“æœè¿”å› 
 int **matrixMultiply(int **a, int **b, int m, int s, int n) {
-    // ³õÊ¼»¯´¢´æ½á¹ûµÄÊı×é 
+    // åˆå§‹åŒ–å‚¨å­˜ç»“æœçš„æ•°ç»„ 
     int **result = new int*[m];
     for (int i = 0; i < m; i++) {
         result[i] = new int[n];
         memset(result[i], 0, sizeof(int)*n);
     }
-    // ½øĞĞ¾ØÕóÏà³Ë¼ÆËã 
+    // è¿›è¡ŒçŸ©é˜µç›¸ä¹˜è®¡ç®— 
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
             for (int k = 0; k < s; k++) {
@@ -28,7 +28,7 @@ int **matrixMultiply(int **a, int **b, int m, int s, int n) {
 
 int main() {
     int m = 2, s = 3, n = 2;
-    // ³õÊ¼»¯ a ¡¢b Á½¸ö¾ØÕó
+    // åˆå§‹åŒ– a ã€b ä¸¤ä¸ªçŸ©é˜µ
     int **a = new int*[m];
     for (int i = 0; i < m; i++) {
         a[i] = new int[s];
@@ -37,7 +37,7 @@ int main() {
     for (int i = 0; i < s; i++) {
         b[i] = new int[n];
     }
-    cout << "a ¾ØÕó£º" << endl;
+    cout << "a çŸ©é˜µï¼š" << endl;
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < s; j++) {
             a[i][j] = i + j;
@@ -45,7 +45,7 @@ int main() {
         }
         cout << endl;
     }
-    cout << "b ¾ØÕó£º" << endl;
+    cout << "b çŸ©é˜µï¼š" << endl;
     for (int i = 0; i < s; i++) {
         for (int j = 0; j < n; j++) {
             b[i][j] = i + j;
@@ -55,8 +55,8 @@ int main() {
     }
 
     int **res = matrixMultiply(a, b, 2, 3, 2);
-    // ½á¹ûÊÇÒ»¸ö 2 ĞĞ 2 ÁĞµÄÊı×é 
-    cout << "Ïà³ËµÄ½á¹û¾ØÕó£º" << endl;
+    // ç»“æœæ˜¯ä¸€ä¸ª 2 è¡Œ 2 åˆ—çš„æ•°ç»„ 
+    cout << "ç›¸ä¹˜çš„ç»“æœçŸ©é˜µï¼š" << endl;
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 2; j++) {
             cout << res[i][j] << " ";
@@ -64,7 +64,7 @@ int main() {
         cout << endl;
     }
 
-    // ÊÍ·ÅÉêÇëµÄÄÚ´æ¿Õ¼ä 
+    // é‡Šæ”¾ç”³è¯·çš„å†…å­˜ç©ºé—´ 
     if (a != NULL) {
         for (int i = 0; i < m; i++) {
             delete[] a[i];
